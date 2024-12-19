@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.animated-title {
+  transition: transform 0.3s;
+}
+
+.animated-title:hover {
+  transform: scale(1.5);
+}
+
+.animated-paragraph {
+  transition: background-color 0.5s;
+}
+
+.animated-paragraph.clicked {
+  background-color: yellow;
+}
+
+.hidden {
+  display: none;
+}
+
+#lectures {
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+#lectures.show {
+  display: block;
+  opacity: 1;
+}
+
+.animated-image {
+  transition: transform 0.5s;
+}
+
+.animated-image:hover {
+  transform: rotate(360deg);
+}
+
+#form-message {
+  transition: color 0.5s;
+}
+
+#form-message.show {
+  color: green;
+}

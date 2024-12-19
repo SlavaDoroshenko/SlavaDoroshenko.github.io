@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <title>Услуги</title>
+  </head>
+  <body>
+    <header>
+      <section class="header__main">
+        <img class="img__logo" alt="Логотип" src="img/icon.ico" />
+
+        <p class="name">
+          Группа ЭФБО-07-23 <br />
+          Дорошенко Вячеслав Павлович
+        </p>
+      </section>
+
+      <section class="header__nav">
+        <ul class="header_nav__list">
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="main.html">Главная</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="first.html">Первый семестр</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="#">Второй семестр</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="#">Услуги</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="#">Авторизация</a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main>
+      <section class="main__nav">
+        <h3>Навигация по странцие</h3>
+
+        <ul class="main_nav__list">
+          <li class="main_nav__item">
+            <a class="main_nav__link" href="#front">Фронтенд</a>
+          </li>
+          <li class="main_nav__item">
+            <a class="main_nav__link" href="#back">Бэкенд</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__info">
+        <h2 class="main_info__title">Разработка веб приложений</h2>
+
+        <ul class="main_services__list">
+          <li class="main_services__item">
+            <img
+              class="main_services__img"
+              src="img/avatar.jpg"
+              alt="Сайт во"
+            />
+
+            <p class="img-label">Крутой вообще</p>
+          </li>
+
+          <li class="main_services__item">
+            <img
+              class="main_services__img"
+              src="img/avatar.jpg"
+              alt="Сайт во"
+            />
+
+            <p class="img-label">Крутой вообще</p>
+          </li>
+
+          <li class="main_services__item">
+            <img
+              class="main_services__img"
+              src="img/avatar.jpg"
+              alt="Сайт во"
+            />
+
+            <p class="img-label">Крутой вообще</p>
+          </li>
+        </ul>
+
+        <p>
+          Ну и тут было бы самое крутое описание о том, какие сайты я крутые
+          собираю. Насколько дорого и шедеврально я крашу кнопки и верстаю по
+          макету. кайф вообще.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer__copyright">&copy;Дорошенко Вячеслав Павлович</p>
+
+      <ul class="footer__contact">
+        <li class="footer_contact__item">
+          <a href="vk.com">vk</a>
+        </li>
+        <li class="footer_contact__item">
+          <a href="telegram.com">tg</a>
+        </li>
+      </ul>
+    </footer>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Разработка веб-приложения</h2>
+        <p>Заполните форму и мы свяжемся с вами.</p>
+
+        <form id="form">
+          <label for="name">Как вас зовут</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="например Иванов Иван Иванович"
+            required
+          />
+
+          <label for="email">Ваш e-mail</label>
+          <input type="email" id="email" placeholder="test@mail.ru" required />
+
+          <label for="phone">Телефон</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="+7 919 999 99 99"
+            required
+          />
+
+          <label for="country">Страна</label>
+          <select id="country">
+            <option value="russia">Россия</option>
+            <option value="ukraine">Украина</option>
+            <option value="belarus">Беларусь</option>
+          </select>
+
+          <label for="date">Дата</label>
+          <input type="date" id="date" placeholder="дд/мм/гггг" />
+
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" rows="4"></textarea>
+
+          <label class="checkbox">
+            <input type="checkbox" required /> Согласен на обработку моих
+            персональных данных
+          </label>
+
+          <button type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

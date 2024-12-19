@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+    </style>
+    <title>Главная</title>
+    <script defer src="test.js"></script>
+  </head>
+  <body>
+    <header>
+      <section class="header__main">
+        <img class="img__logo" alt="Логотип" src="img/icon.ico" />
+
+        <p class="name">
+          Группа ЭФБО-07-23 <br />
+          Дорошенко Вячеслав Павлович
+        </p>
+      </section>
+
+      <section class="header__nav">
+        <ul class="header_nav__list">
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="#">Главная</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="first.html">Первый семестр</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" id="secondSemesterButton"
+              >Второй семестр</a
+            >
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="services.html">Услуги</a>
+          </li>
+          <li class="header_nav__item">
+            <a class="header_nav__link" href="#">Авторизация</a>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <main>
+      <section class="main__nav">
+        <h3>Навигация по странцие</h3>
+
+        <ul class="main_nav__list">
+          <li class="main_nav__item">
+            <a class="main_nav__link" href="#front">Фронтенд</a>
+          </li>
+          <li class="main_nav__item">
+            <a class="main_nav__link" href="#back">Бэкенд</a>
+          </li>
+          <li class="main_nav__item">
+            <a class="main_nav__link" href="#advantages">Преимущества</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="main__info">
+        <article class="main_info__header">
+          <div>
+            <h2 class="main__title">Добро пожаловать на мой сайт!</h2>
+
+            <p>Меня зовут Славик, я норм чел</p>
+          </div>
+
+          <img
+            src="img/avatar.jpg"
+            alt="Мой аватар"
+            id="studentPhoto"
+            class="img__avatar"
+          />
+        </article>
+
+        <h3 class="main__title" id="front">Фронтенд</h3>
+
+        <table id="practiceTable"></table>
+
+        <p class="animated-paragraph">
+          Фронтенд (англ. front end, frontend) — это презентационная часть
+          web-приложений, информационной или программной системы, её
+          пользовательский интерфейс и связанные с ним компоненты.
+        </p>
+
+        <div id="lectures" class="hidden">
+          <h2>Лекции</h2>
+          <ul>
+            <li>Лекция 1</li>
+            <li>Лекция 2</li>
+            <li>Лекция 3</li>
+          </ul>
+        </div>
+
+        <div class="main-video">
+          <video class="main-video" src="img/smile_face.mp4" controls></video>
+        </div>
+
+        <h3 class="main__title" id="back">Бэкенд</h3>
+
+        <p>
+          Бэкенд-разработчик (backend developer) — это специалист, который
+          занимается серверной частью сайтов, мобильных и десктопных приложений
+          и игр.
+        </p>
+
+        <div class="main-video">
+          <video src="img/smile_face.mp4" controls class="main-video"></video>
+        </div>
+
+        <h3 class="super" id="super">Почему я крутой</h3>
+
+        <ul class="example-grid__list" id="advantages">
+          <li class="example-grid__item">Я красивый</li>
+          <li class="example-grid__item">Умный</li>
+          <li class="example-grid__item">Привлекательный</li>
+          <li class="example-grid__item">Общительный</li>
+          <li class="example-grid__item">Смешной</li>
+          <li class="example-grid__item">Мили</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p class="footer__copyright">&copy;Дорошенко Вячеслав Павлович</p>
+
+      <ul class="footer__contact">
+        <li class="footer_contact__item">
+          <a href="vk.com">vk</a>
+        </li>
+        <li class="footer_contact__item">
+          <a href="telegram.com">tg</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script>
+      document.getElementById("super").addEventListener("click", function () {
+        alert("Вы кликнули на заголовок - так держать!");
+      });
+
+      document
+        .getElementById("secondSemesterButton")
+        .addEventListener("click", function () {
+          const topics = [
+            "Базовое бэкенд - приложение",
+            "HTTP - запросы",
+            "JSON и работа с ним",
+            "HTTP - ответы",
+            "Проектирование API",
+            "Роутинг и его настройка",
+            "NoSQL базы данных",
+            "Обеспечение авторизации и доступа пользователей",
+            "Работа сторонних сервисов уведомления и авторизации",
+            "Основы ReactJS",
+            "Работа с компонентами динамической DOM",
+            "Использование хуков в React",
+            "Основы микросервисной архитектуры",
+            "Разработка классических модулей веб - приложений",
+          ];
+          const table = document.getElementById("practiceTable");
+          table.innerHTML = "<tr><th>Темы практик</th></tr>";
+          topics.forEach((topic) => {
+            const row = table.insertRow();
+            const cell = row.insertCell(0);
+            cell.textContent = topic;
+          });
+        });
+
+      document
+        .getElementById("studentPhoto")
+        .addEventListener("mouseover", function () {
+          this.style.width = "220px";
+          this.style.height = "220px";
+        });
+
+      document
+        .getElementById("studentPhoto")
+        .addEventListener("mouseout", function () {
+          this.style.width = "200px";
+          this.style.height = "200px";
+        });
+
+      document
+        .getElementById("studentPhoto")
+        .addEventListener("click", function () {
+          this.src = "kad.jpg";
+        });
+
+      document
+        .getElementById("studentPhoto")
+        .addEventListener("dblclick", function () {
+          alert("Не налегай, у меня не так много любимых преподавателей");
+        });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const paragraph = document.querySelector(".animated-paragraph");
+        const showLecturesButton = document.getElementById("show-lectures");
+        const lecturesDiv = document.getElementById("lectures");
+        const form = document.getElementById("myForm");
+        const formMessage = document.getElementById("form-message");
+
+        // Анимация для параграфа
+        paragraph.addEventListener("click", () => {
+          paragraph.classList.toggle("clicked");
+        });
+
+        // Показать лекции
+        showLecturesButton.addEventListener("click", () => {
+          lecturesDiv.classList.toggle("show");
+        });
+
+        // Обработчик события для формы
+        form.addEventListener("submit", (event) => {
+          event.preventDefault(); // Предотвращаем отправку формы
+          formMessage.classList.add("show");
+        });
+      });
+    </script>
+  </body>
+</html>
